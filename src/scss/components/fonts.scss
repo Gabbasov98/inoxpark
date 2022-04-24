@@ -1,0 +1,11 @@
+@import '../mixins';
+@include font-face('Helvetica Neue', 'HelveticaNeueCyr-Light', 300);
+@include font-face('Helvetica Neue', 'HelveticaNeueCyr-Roman', 400);
+@include font-face('Helvetica Neue', 'HelveticaNeueCyr-Medium', 500);
+@include font-face('Helvetica Neue', 'HelveticaNeueCyr-Bold', 700);
+@font-face {
+    font-family: "Impact";
+    src: url('../fonts/ImpactRegular.ttf') format('ttf'), url('../fonts/ImpactRegular.woff') format('woff'), url('../fonts/ImpactRegular.eot') format('eot');
+    font-weight: 400;
+    font-display: swap;
+}

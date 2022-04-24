@@ -1,0 +1,59 @@
+@import "../vars";
+.display,
+h2 {
+    font-size: 52px;
+    line-height: 115%;
+    font-family: $font2;
+    font-weight: 400;
+    span {
+        color: $blue;
+    }
+}
+
+.display2 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 123%;
+    font-family: $font2;
+    span {
+        color: $blue;
+    }
+}
+
+.black-link {
+    &:hover {
+        color: $blue;
+    }
+}
+
+.blue-link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 186%;
+    color: $blue;
+    display: flex;
+    align-items: center;
+    svg {
+        margin-left: 7px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .display,
+    h2 {
+        font-size: 36px;
+    }
+    .display2 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .display,
+    h2 {
+        font-size: 28px;
+    }
+    .display2 {
+        font-size: 24px;
+    }
+}
