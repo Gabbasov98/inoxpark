@@ -88,7 +88,7 @@ ol {
     }
 }
 
-ul {
+ul:not(.list) {
     &:not(:last-child) {
         margin-bottom: 20px;
     }
