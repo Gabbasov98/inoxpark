@@ -10,7 +10,8 @@ h2 {
     }
 }
 
-.display2 {
+.display2,
+h3 {
     font-weight: 400;
     font-size: 32px;
     line-height: 123%;
@@ -38,12 +39,89 @@ h2 {
     }
 }
 
+.blue-text {
+    color: $blue;
+}
+
+.red-text {
+    color: #E7625A;
+}
+
+.grey-text {
+    color: #8C9AA8;
+}
+
+p {
+    font-size: 16px;
+    line-height: 162%;
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    strong {
+        font-weight: 700;
+    }
+}
+
+ol {
+    counter-reset: num;
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    li {
+        position: relative;
+        font-size: 16px;
+        line-height: 120%;
+        position: relative;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        &:before {
+            content: counter(num) ".";
+            counter-increment: num;
+            position: absolute;
+            z-index: 1;
+            width: 23px;
+            height: 19px;
+            left: -27px;
+            top: 0;
+        }
+    }
+}
+
+ul {
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    li {
+        font-size: 16px;
+        line-height: 120%;
+        padding-left: 25px;
+        position: relative;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: $black;
+            left: 9px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
 @media screen and (max-width: 992px) {
     .display,
     h2 {
         font-size: 36px;
     }
-    .display2 {
+    .display2,
+    h3 {
         font-size: 28px;
     }
 }
@@ -53,7 +131,8 @@ h2 {
     h2 {
         font-size: 28px;
     }
-    .display2 {
+    .display2,
+    h3 {
         font-size: 24px;
     }
 }

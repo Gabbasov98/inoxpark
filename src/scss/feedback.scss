@@ -15,19 +15,6 @@
             margin-bottom: 20px;
         }
     }
-    &__bottom {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 45px;
-    }
-    &__buttons {
-        display: flex;
-        align-items: center;
-    }
-    &__btn {
-        margin-right: 5px;
-    }
 }
 
 .feedback-card {
@@ -84,21 +71,44 @@
     }
 }
 
-@media screen and (max-width: 992px) {
-    .feedback-block {
-        &__bottom {
-            flex-wrap: wrap;
-        }
-        &__buttons {
-            order: 2;
-            width: 100%;
-            justify-content: center;
-            margin-top: 50px;
-        }
-        .pagination {
-            width: 100%;
+.feedback {
+    padding: 40px 0 85px;
+    .feedback-card {
+        background: #F3F5F6;
+        box-shadow: -20px -20px 40px #FFFFFF, 10px 20px 40px rgba(76, 82, 91, 0.1), inset 1px 1px 2px rgba(255, 255, 255, 0.5);
+    }
+    .info-block {
+        &:not(:last-child) {
+            margin-bottom: 40px;
         }
     }
+}
+
+.certificate {
+    padding: 85px 0 130px;
+    overflow: hidden;
+    background-color: #fff;
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+    }
+    .swiper-container {
+        padding: 60px 0;
+    }
+    .swiper-wrapper {
+        align-items: stretch;
+    }
+    .swiper-slide {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 992px) {
     .feedback-card {
         padding: 20px 25px;
         &__date {
@@ -109,6 +119,32 @@
         }
         &__img {
             margin-right: 20px;
+        }
+    }
+    .certificate {
+        padding-top: 50px;
+        padding-bottom: 40px;
+        &__inner {
+            padding-bottom: 50px;
+            position: relative;
+        }
+        &__nav {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            justify-content: center;
+        }
+        .swiper-container {
+            padding: 30px 0;
+        }
+    }
+    .feedback {
+        padding: 20px 0 50px;
+        .info-block__title {
+            br {
+                display: none;
+            }
         }
     }
 }

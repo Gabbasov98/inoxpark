@@ -1,0 +1,209 @@
+@import "vars";
+@import "mixins";
+.orders {}
+
+.order {
+    display: flex;
+    justify-content: space-between;
+    &:not(:last-child) {
+        margin-bottom: 65px;
+    }
+    &__left {
+        width: 315px;
+        margin-right: 75px;
+        flex-shrink: 0;
+    }
+    &__right {
+        flex-grow: 1;
+    }
+    &__title {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 86%;
+    }
+    &__date {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        margin-top: 23px;
+    }
+    &__block {
+        background: #FFFFFF;
+        border-radius: 6px;
+    }
+    &__status {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: $blue;
+        padding: 32px 48px;
+        img {
+            margin-right: 13px;
+        }
+        &--black {
+            color: $black;
+        }
+        &--green {
+            color: #6DC067;
+        }
+        &--orange {
+            color: #F37928;
+        }
+    }
+    &__items {
+        padding-left: 36px;
+        padding-right: 8px;
+        &-wrap {
+            max-height: 406px;
+            overflow-y: auto;
+            padding-right: 25px;
+            @include scroll;
+        }
+    }
+    &__item {
+        padding: 22px 0;
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba(196, 196, 196, 0.5);
+        }
+        &:first-child {
+            padding-top: 0;
+        }
+    }
+    &__all {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 64px 20px 38px;
+        min-height: 100px;
+        border-top: 1px solid rgba(196, 196, 196, 0.5);
+        &-title {
+            font-weight: 700;
+            font-size: 24px;
+            letter-spacing: 0.177778px;
+        }
+        &-price {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 56px;
+            color: $blue;
+            span {
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0.155556px;
+            }
+        }
+    }
+}
+
+.order-card {
+    display: flex;
+    padding-right: 24px;
+    &__img {
+        width: 115px;
+        display: block;
+        flex-shrink: 0;
+        margin-right: 18px;
+        img {
+            width: 100%;
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 143%;
+        display: block;
+    }
+    &__info {
+        max-width: 235px;
+    }
+    &__articul {
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.133333px;
+        margin-top: 10px;
+        span {
+            color: #8C9AA8;
+        }
+    }
+    &__num {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 10px;
+    }
+    &__price {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 56px;
+        position: relative;
+        margin-left: auto;
+        &>span {
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.155556px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .order {
+        &__left {
+            margin-right: 40px;
+            width: 280px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .order {
+        display: block;
+        &__left {
+            width: 100%;
+            margin: 0 0 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .order {
+        &__all {
+            padding: 18px 24px;
+            min-height: unset;
+            &-title,
+            &-price {
+                font-size: 22px;
+            }
+        }
+        &__items {
+            padding: 0;
+            // padding-bottom: 10px;
+            &-wrap {
+                overflow-y: hidden;
+                overflow-x: auto;
+                display: flex;
+            }
+        }
+        &__status {
+            padding: 18px 24px;
+        }
+    }
+    .order-card {
+        display: block;
+        text-align: center;
+        padding-right: 0;
+        flex-shrink: 0;
+        min-width: 250px;
+        &__img {
+            margin: 0 auto;
+        }
+        &__info {
+            max-width: 100%;
+            margin: 30px 0 0;
+        }
+        &__price {
+            font-size: 22px;
+        }
+    }
+}

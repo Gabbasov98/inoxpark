@@ -1,0 +1,29 @@
+.docs {
+    padding: 45px 0 120px;
+    &__items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+    }
+    .certificate-card {
+        &__bottom {
+            background: #FFFFFF;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .docs {
+        &__items {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .docs {
+        &__items {
+            grid-template-columns: 1fr;
+        }
+    }
+}

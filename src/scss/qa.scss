@@ -1,0 +1,105 @@
+@import "vars";
+.qa {
+    padding: 50px 0 145px;
+    .info-block {
+        margin: 0 !important;
+    }
+    &__items {
+        margin-top: 58px;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+    .qa-card {
+        background-color: #fff;
+        &__btn {
+            background: #FFF;
+            &:hover {
+                background: #F3F5F6;
+            }
+        }
+    }
+}
+
+.qa-card {
+    padding: 25px 46px 25px 50px;
+    background: #F3F5F6;
+    border-radius: 6px;
+    &--active {
+        .qa-card {
+            &__title {
+                color: $blue;
+            }
+            &__btn {
+                transform: rotate(45deg);
+            }
+            &__hidden {
+                display: block;
+            }
+        }
+    }
+    &__show {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 110%;
+        letter-spacing: 0.177778px;
+    }
+    &__btn {
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+        background: #F3F5F6;
+        box-shadow: 10px 10px 20px rgba(76, 82, 91, 0.12), inset 1px 1px 2px rgba(247, 247, 247, 0.5);
+        border-radius: 50%;
+        &:hover {
+            background: #fff;
+        }
+    }
+    &__hidden {
+        margin-top: 18px;
+        padding-left: 50px;
+        max-width: 870px;
+        display: none;
+        padding-bottom: 13px;
+        p {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .qa {
+        padding: 30px 0 50px;
+        &__items {
+            margin-top: 20px;
+        }
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .qa-card {
+        padding: 25px;
+        &__hidden {
+            padding: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .qa-card {
+        &__title {
+            font-size: 20px;
+        }
+    }
+}

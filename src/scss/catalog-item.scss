@@ -354,6 +354,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        background-color: #fff;
         &:hover {
             &::before {
                 background-image: url(../img/search.svg);

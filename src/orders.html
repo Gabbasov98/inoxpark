@@ -1,0 +1,168 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Заказы", "description":"", "keywords":"",})
+
+<body>
+
+    <div class="wrapper">
+        @@include('components/page-blocks/_header.html')
+        <main class="content">
+
+
+            <section class='breadcrumbs'>
+                <div class='container'>
+                    <div class='breadcrumbs__inner'>
+                        <a href="" class="breadcrumbs__item">Главная</a>
+                        <span class="breadcrumbs__item">Заказы</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class='lk'>
+                <div class='container'>
+                    <h1 class="lk__title display">Заказы</h1>
+                    @@include('components/lk/_lk-links.html',{"active":"orders"})
+                    <div class="lk__content">
+                        <div class="orders">
+                            <div class="order">
+                                <div class="order__left">
+                                    <div class="order__title">Заказ № 1234567890</div>
+                                    <div class="order__date">05 марта 2022</div>
+                                </div>
+                                <div class="order__right">
+                                    <div class="order__block">
+                                        <div class="order__status">
+                                            <img src="img/check2.svg" alt="">
+                                            <span>Заказ выполнен</span>
+                                        </div>
+                                        <div class="order__items">
+                                            <div class="order__items-wrap">
+                                                <div class="order__item">
+                                                    @@include('components/lk/_order-card.html')
+                                                </div>
+                                                <div class="order__item">
+                                                    @@include('components/lk/_order-card.html')
+                                                </div>
+                                                <div class="order__item">
+                                                    @@include('components/lk/_order-card.html')
+                                                </div>
+                                                <div class="order__item">
+                                                    @@include('components/lk/_order-card.html')
+                                                </div>
+                                                <div class="order__item">
+                                                    @@include('components/lk/_order-card.html')
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order__all">
+                                            <div class="order__all-title">Итого:</div>
+                                            <div class="order__all-price">
+                                                <span>от</span> 7 629
+                                                <span>руб</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="order">
+                                <div class="order__left">
+                                    <div class="order__title">Заказ № 1234567890</div>
+                                    <div class="order__date">05 марта 2022</div>
+                                </div>
+                                <div class="order__right">
+                                    <div class="order__block">
+                                        <div class="order__status order__status--black">
+                                            <img src="img/close.svg" alt="">
+                                            <span>Заказ отменен</span>
+                                        </div>
+                                        <div class="order__items">
+                                            <div class="order__items-wrap">
+                                                <div class="order__item">
+                                                    @@include('components/lk/_order-card.html')
+                                                </div>
+                                                <div class="order__item">
+                                                    @@include('components/lk/_order-card.html')
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order__all">
+                                            <div class="order__all-title">Итого:</div>
+                                            <div class="order__all-price">
+                                                <span>от</span> 5 629
+                                                <span>руб</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="order">
+                                <div class="order__left">
+                                    <div class="order__title">Заказ № 1234567890</div>
+                                    <div class="order__date">05 марта 2022</div>
+                                </div>
+                                <div class="order__right">
+                                    <div class="order__block">
+                                        <div class="order__status order__status--green">
+                                            <img src="img/plus.svg" alt="">
+                                            <span>Оплачен</span>
+                                        </div>
+                                        <div class="order__items">
+                                            <div class="order__items-wrap">
+                                                <div class="order__item">
+                                                    @@include('components/lk/_order-card.html')
+                                                </div>
+                                                <div class="order__item">
+                                                    @@include('components/lk/_order-card.html')
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order__all">
+                                            <div class="order__all-title">Итого:</div>
+                                            <div class="order__all-price">
+                                                <span>от</span> 5 629
+                                                <span>руб</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="order">
+                                <div class="order__left">
+                                    <div class="order__title">Заказ № 1234567890</div>
+                                    <div class="order__date">05 марта 2022</div>
+                                </div>
+                                <div class="order__right">
+                                    <div class="order__block">
+                                        <div class="order__status order__status--orange">
+                                            <img src="img/refresh.svg" alt="">
+                                            <span>Обработка</span>
+                                        </div>
+                                        <div class="order__items">
+                                            <div class="order__items-wrap">
+                                                <div class="order__item">
+                                                    @@include('components/lk/_order-card.html')
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order__all">
+                                            <div class="order__all-title">Итого:</div>
+                                            <div class="order__all-price">
+                                                <span>от</span> 2 629
+                                                <span>руб</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main> @@include('components/page-blocks/_footer.html')
+    </div>
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

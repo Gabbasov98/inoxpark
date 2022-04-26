@@ -1,17 +1,3 @@
-// let portfolioSlidersArray = []
-
-// function projectsSliders() {
-//     $(".projects__slider").each(function(index, el) {
-//         $(el).attr("data-slider-id", `${index}`)
-//         portfolioSlidersArray[index] = new Swiper(`.projects__slider[data-slider-id="${index}"] .swiper-container`, {
-//             slidesPerView: "auto",
-//             spaceBetween: 10,
-//         })
-//     })
-// }
-
-
-
 $(document).ready(function() {
     $(".select").niceSelect()
     cartCalc()
@@ -26,11 +12,27 @@ $(document).ready(function() {
         if ($(this).children(".video").get(0).paused) {
             $(this).children(".video").get(0).play();
             $(this).children(".playpause").fadeOut();
+            $(this).children(".video-wrap__badge").fadeOut();
         } else {
             $(this).children(".video").get(0).pause();
             $(this).children(".playpause").fadeIn();
+            // $(this).children(".video-wrap__badge").fadeIn();
         }
     });
+
+    $(".qa-card__btn").click(function() {
+        $(this).parents(".qa-card").toggleClass("qa-card--active")
+        $(this).parents(".qa-card").find(".qa-card__hidden").slideToggle()
+    })
+
+    $(".tab").click(function() {
+        let parent = $(this).parents(".tab-parent")
+        let path = $(this).attr("data-tabs-path")
+        $(parent).find(".tab").removeClass("tab--active")
+        $(this).addClass("tab--active")
+        $(parent).find(".tab__content").removeClass("tab__content--active")
+        $(parent).find(`.tab__content[data-tabs-path="${path}"]`).addClass("tab__content--active")
+    })
 });
 
 function cartCalc() {

@@ -1,0 +1,61 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Избранное", "description":"", "keywords":"",})
+
+<body>
+
+    <div class="wrapper">
+        @@include('components/page-blocks/_header.html')
+        <main class="content">
+
+
+            <section class='breadcrumbs'>
+                <div class='container'>
+                    <div class='breadcrumbs__inner'>
+                        <a href="" class="breadcrumbs__item">Главная</a>
+                        <span class="breadcrumbs__item">Личный кабинет</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class='lk'>
+                <div class='container'>
+                    <h1 class="lk__title display">Личный кабинет</h1>
+                    @@include('components/lk/_lk-links.html',{"active":"favourite"})
+                    <div class="lk__content">
+                        <div class="favourite">
+                            <div class='subcatalog__items'>
+                                <div class="our-product__item">
+                                    @@include('components/cards/_products-card.html',{"badge":"yellow"})
+                                </div>
+                                <div class="our-product__item">
+                                    @@include('components/cards/_products-card.html',{"badge":"green"})
+                                </div>
+                                <div class="our-product__item">
+                                    @@include('components/cards/_products-card.html',{"badge":""})
+                                </div>
+                                <div class="our-product__item">
+                                    @@include('components/cards/_products-card.html',{"badge":""})
+                                </div>
+                                <div class="our-product__item">
+                                    @@include('components/cards/_products-card.html',{"badge":"yellow"})
+                                </div>
+                                <div class="our-product__item">
+                                    @@include('components/cards/_products-card.html',{"badge":"green"})
+                                </div>
+                                <div class="our-product__item">
+                                    @@include('components/cards/_products-card.html',{"badge":""})
+                                </div>
+                                <div class="our-product__item">
+                                    @@include('components/cards/_products-card.html',{"badge":"yellow"})
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main> @@include('components/page-blocks/_footer.html')
+    </div>
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

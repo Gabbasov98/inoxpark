@@ -1,0 +1,132 @@
+@import "vars";
+.projects-gallery {
+    padding: 50px 0 100px;
+    overflow: hidden;
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 100%;
+        right: 0;
+    }
+    .swiper-container {
+        padding: 60px 0;
+    }
+    .swiper-wrapper {
+        align-items: stretch;
+    }
+    .swiper-slide {
+        height: auto;
+    }
+    .page-bottom {
+        margin-top: 30px;
+    }
+    &__slider {
+        position: relative;
+    }
+    &__tabs {
+        margin-top: 48px;
+        &~.tab__content {
+            .projects-gallery__nav {
+                @media screen and (min-width: 992px) {
+                    margin-bottom: 100px;
+                }
+            }
+        }
+    }
+    &__tab {
+        flex-grow: 1;
+    }
+}
+
+.projects {
+    padding-bottom: 90px;
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(2, calc(50% - 15px));
+        gap: 30px;
+    }
+}
+
+.projects-catalog {
+    padding: 70px 0 130px;
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    @media screen and (min-width: 992px) {
+        .page-bottom {
+            margin-top: 90px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .projects-gallery {
+        &__tab {
+            padding: 0 10px;
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .projects-gallery {
+        padding-top: 50px;
+        padding-bottom: 20px;
+        &__inner {
+            padding-bottom: 50px;
+            position: relative;
+        }
+        &__nav {
+            top: 100%;
+            bottom: unset;
+            right: unset;
+            left: 50%;
+            transform: translateX(-50%);
+            justify-content: center;
+        }
+        .swiper-container {
+            padding: 30px 0;
+        }
+        &__slider {
+            padding-bottom: 20px;
+        }
+        &__tab {
+            flex-grow: 0;
+            padding: 0 30px;
+        }
+    }
+    .projects {
+        padding-bottom: 50px;
+        &__items {
+            gap: 20px;
+        }
+    }
+    .projects-catalog {
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projects {
+        &__items {
+            grid-template-columns: 100%;
+        }
+    }
+    .projects-catalog {
+        &__items {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

@@ -97,10 +97,94 @@ function productsSlider() {
     })
 }
 
+let catalogsSlidersArray = []
+
+function catalogsSliders() {
+    $(".catalogs-slider").each(function(index, el) {
+        $(el).attr("data-slider-id", `${index}`)
+        catalogsSlidersArray[index] = new Swiper(`.catalogs-slider[data-slider-id="${index}"] .swiper-container`, {
+            slidesPerView: "auto",
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: `.catalogs-slider[data-slider-id="${index}"] .swiper-button-next`,
+                prevEl: `.catalogs-slider[data-slider-id="${index}"] .swiper-button-prev`,
+            },
+        })
+    })
+}
+
+let projectSlidersArray = []
+
+function projectSliders() {
+    $(".projects-gallery__slider").each(function(index, el) {
+        $(el).attr("data-slider-id", `${index}`)
+        projectSlidersArray[index] = new Swiper(`.projects-gallery__slider[data-slider-id="${index}"] .swiper-container`, {
+            slidesPerView: "auto",
+            spaceBetween: 30,
+            // loop: true,
+            navigation: {
+                nextEl: `.projects-gallery__slider[data-slider-id="${index}"] .swiper-button-next`,
+                prevEl: `.projects-gallery__slider[data-slider-id="${index}"] .swiper-button-prev`,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1
+                },
+                600: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                },
+            }
+        })
+    })
+}
+
+let projectGalleryArray = []
+
+function catalogsSliders() {
+    $(".project-card2__gallery").each(function(index, el) {
+        $(el).attr("data-slider-id", `${index}`)
+        small = new Swiper(`.project-card2__gallery[data-slider-id="${index}"] .mySwiper`, {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        })
+        big = new Swiper(`.project-card2__gallery[data-slider-id="${index}"] .mySwiper2`, {
+            slidesPerView: "auto",
+            spaceBetween: 10,
+            // loop: true,
+            navigation: {
+                nextEl: `.project-card2__gallery[data-slider-id="${index}"] .swiper-button-next`,
+                prevEl: `.project-card2__gallery[data-slider-id="${index}"] .swiper-button-prev`,
+            },
+            thumbs: {
+                swiper: small,
+            },
+        })
+        projectGalleryArray[index] = {
+            small: small,
+            big: big
+        }
+    })
+}
+
+
+
+
+
 $(document).ready(function() {
     gallery()
     productGallerySlider()
     productsSlider()
+    catalogsSliders()
+    projectSliders()
+    catalogsSliders()
 
     $("[data-video-src]").click(function() {
         let videoSrc = $(this).attr("data-video-src")

@@ -1,0 +1,188 @@
+@import "vars";
+.bim {
+    padding: 55px 0 90px;
+    &--pb48 {
+        padding-bottom: 48px;
+    }
+    .info-block {
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
+    &__wrap {
+        display: flex;
+        margin-top: 78px;
+    }
+    &__tabs {
+        width: 40%;
+    }
+    &__tab {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.177778px;
+        min-height: 58px;
+        padding: 5px 16px;
+        border-radius: 5px 0 0 5px;
+        // width: calc(100% + 20px);
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
+        &:hover {
+            color: $blue;
+        }
+        img {
+            margin-right: 18px;
+            flex-shrink: 0;
+        }
+        &--active {
+            pointer-events: none;
+            font-weight: 700;
+            color: $blue;
+            background: #F3F5F6;
+            box-shadow: -20px -20px 40px #FFFFFF, 10px 20px 40px rgba(76, 82, 91, 0.1), inset 1px 1px 2px rgba(255, 255, 255, 0.5);
+        }
+        &-content {
+            display: none;
+            &--active {
+                display: flex;
+                align-items: stretch;
+            }
+        }
+    }
+    &__content {
+        background: #F3F5F6;
+        box-shadow: -20px -20px 40px #FFFFFF, 10px 20px 40px rgba(76, 82, 91, 0.1), inset 1px 1px 2px rgba(255, 255, 255, 0.5);
+        border-radius: 0 5px 5px 5px;
+        width: 60%;
+        overflow: hidden;
+    }
+    &__subtabs {
+        width: 54%;
+        border-right: 1px solid #FFFFFF;
+        padding: 24px 10px 30px 40px;
+        flex-shrink: 0;
+        height: auto;
+    }
+    &__subtab {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.155556px;
+        cursor: pointer;
+        &:hover {
+            color: $blue;
+        }
+        img {
+            margin-left: 10px;
+            flex-shrink: 0;
+        }
+        &:not(:last-child) {
+            margin-bottom: 17px;
+        }
+        &--active {
+            font-weight: 500;
+            color: $blue;
+            pointer-events: none;
+        }
+        &-content {
+            display: none;
+            height: 100%;
+            &--active {
+                display: block;
+            }
+        }
+    }
+    &__doc {
+        padding: 25px 45px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.155556px;
+        &-download {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            display: inline-flex;
+            margin-left: 30px;
+            svg {
+                margin-right: 10px;
+            }
+            &:hover {
+                color: #fff;
+            }
+        }
+        &:hover {
+            font-weight: 700;
+            background-color: $blue;
+            color: #fff;
+            path,
+            rect {
+                fill: #fff;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .bim {
+        &__wrap {
+            display: block;
+            background: #F3F5F6;
+            box-shadow: -20px -20px 40px #FFFFFF, 10px 20px 40px rgba(76, 82, 91, 0.1), inset 1px 1px 2px rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+        }
+        &__tabs {
+            width: 100%;
+        }
+        &__tab {
+            &--active {
+                background: #fff;
+                box-shadow: -20px -20px 40px #FFFFFF, 10px 20px 40px rgba(76, 82, 91, 0.1), inset 1px 1px 2px rgba(255, 255, 255, 0.5);
+            }
+        }
+        &__content {
+            background: transparent;
+            box-shadow: none;
+            border-top: 1px solid #fff;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .bim {
+        padding: 20px 0 50px;
+        &--pb48 {
+            padding-bottom: 0px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bim {
+        &__wrap {
+            margin-top: 45px;
+        }
+        &__tab {
+            font-size: 14px;
+            &-content {
+                &--active {
+                    display: block;
+                }
+            }
+        }
+        &__subtabs {
+            width: 100%;
+            border-right: none;
+            border-bottom: 1px solid #fff;
+            padding: 16px;
+        }
+        &__doc {
+            padding: 16px;
+        }
+    }
+}

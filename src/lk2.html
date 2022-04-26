@@ -1,0 +1,111 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Личный кабинет", "description":"", "keywords":"",})
+
+<body>
+
+    <div class="wrapper">
+        @@include('components/page-blocks/_header.html')
+        <main class="content">
+
+
+            <section class='breadcrumbs'>
+                <div class='container'>
+                    <div class='breadcrumbs__inner'>
+                        <a href="" class="breadcrumbs__item">Главная</a>
+                        <span class="breadcrumbs__item">Личный кабинет</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class='lk'>
+                <div class='container'>
+                    <h1 class="lk__title display">Данные пользователя</h1>
+                    @@include('components/lk/_lk-links.html',{"active":"profile"})
+                    <div class="lk__content">
+                        <div class="lk__forms">
+                            <div class="lk__forms-item">
+                                <div class="consult-form__title display2">Анкета диллера</div>
+                                <div class="consult-form__grid">
+                                    <fieldset class="form-group">
+                                        <input type="text" placeholder="ФИО ">
+                                    </fieldset>
+                                    <fieldset class="form-group">
+                                        <input type="text" placeholder="Адрес для доставки ">
+                                    </fieldset>
+                                    <fieldset class="form-group">
+                                        <input type="email" placeholder="E-mail*">
+                                    </fieldset>
+                                    <div class="consult-form__files">
+                                        <div class="consult-form__files-input btn btn-blue-outline">
+                                            <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.99997 4.54623V6.45377C9.99997 6.59737 9.88362 6.71389 9.73985 6.71389H6.21389V10.2399C6.21389 10.3836 6.09737 10.5 5.95377 10.5H4.04623C3.90272 10.5 3.78611 10.3836 3.78611 10.2399V6.71389H0.26012C0.116408 6.71389 0 6.59737 0 6.45377V4.54623C0 4.4026 0.116408 4.28611 0.26012 4.28611H3.78611V0.76012C3.78611 0.616351 3.90269 0.5 4.04623 0.5H5.95377C6.09737 0.5 6.21389 0.616351 6.21389 0.76012V4.28611H9.73985C9.88365 4.28611 9.99997 4.4026 9.99997 4.54623Z" fill="#0092B4"></path>
+                                            </svg>
+                                            <span>Прикрепить реквизиты</span>
+                                            <input type="file">
+                                        </div>
+                                        <div class="consult-form__files-item">
+                                            <span>Реквизиты</span>
+                                            <button class="consult-form__files-delete" type="button">
+                                                <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.93216 0.29007L9.281 1.6389C9.38254 1.74044 9.38266 1.90511 9.281 2.00677L6.78777 4.5L9.281 6.99323C9.38268 7.09491 9.38254 7.25956 9.281 7.3611L7.93216 8.70993C7.83069 8.81141 7.66596 8.81159 7.5643 8.70993L5.07107 6.2167L2.57782 8.70995C2.4762 8.81157 2.31149 8.81149 2.20995 8.70995L0.861117 7.36112C0.759558 7.25956 0.759498 7.09487 0.861117 6.99325L3.35437 4.5L0.861117 2.00675C0.759457 1.90509 0.759619 1.74038 0.861117 1.63888L2.20995 0.290049C2.31149 0.188511 2.47616 0.188389 2.57782 0.290049L5.07107 2.7833L7.5643 0.29007C7.66598 0.188389 7.83061 0.188511 7.93216 0.29007Z" fill="#999999"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <fieldset class="form-group">
+                                        <input type="tel" placeholder="Контактный телефон">
+                                    </fieldset>
+                                </div>
+                            </div>
+
+                            <div class="lk__forms-item">
+                                <div class="consult-form__title display2">Данные компании</div>
+                                <div class="consult-form__grid">
+                                    <fieldset class="form-group">
+                                        <input type="text" placeholder="ИНН">
+                                    </fieldset>
+                                    <fieldset class="form-group">
+                                        <input type="text" placeholder="Расчетный счет">
+                                    </fieldset>
+                                    <fieldset class="form-group">
+                                        <input type="text" placeholder="КПП">
+                                    </fieldset>
+                                    <fieldset class="form-group">
+                                        <input type="text" placeholder="Наименование банка">
+                                    </fieldset>
+                                    <fieldset class="form-group">
+                                        <input type="text" placeholder="Наименование организации">
+                                    </fieldset>
+                                    <fieldset class="form-group">
+                                        <input type="text" placeholder="Кореспонденский счет">
+                                    </fieldset>
+                                    <fieldset class="form-group">
+                                        <input type="text" placeholder="Юридический адрес">
+                                    </fieldset>
+                                    <fieldset class="form-group">
+                                        <input type="text" placeholder="БИК">
+                                    </fieldset>
+                                    <fieldset class="form-group">
+                                        <input type="text" placeholder="Фактический адрес">
+                                    </fieldset>
+
+
+                                    <div class="consult-form__btn-block">
+                                        <button class="consult-form__btn btn btn-blue">Сохранить</button>
+                                    </div>
+                                    <div class="consult-form__check check">
+                                        <input checked="" type="checkbox">
+                                        <label>Совпадает с юридическим адресом</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main> @@include('components/page-blocks/_footer.html')
+    </div>
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

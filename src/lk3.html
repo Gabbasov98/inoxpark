@@ -1,0 +1,76 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Личный кабинет", "description":"", "keywords":"",})
+
+<body>
+
+    <div class="wrapper">
+        @@include('components/page-blocks/_header.html')
+        <main class="content">
+
+
+            <section class='breadcrumbs'>
+                <div class='container'>
+                    <div class='breadcrumbs__inner'>
+                        <a href="" class="breadcrumbs__item">Главная</a>
+                        <span class="breadcrumbs__item">Личный кабинет</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class='lk'>
+                <div class='container'>
+                    <h1 class="lk__title display">Личный кабинет</h1>
+                    @@include('components/lk/_lk-links.html',{"active":"profile"})
+                    <div class="lk__content">
+                        <div class="profile-edit profile-edit--saved">
+                            <div class="profile-edit__left">
+                                <div class="profile-edit__card">
+                                    <div class="profile-edit__user">
+                                        <div class="profile-edit__user-img">
+                                            <img src="img/user2.svg" alt="">
+                                        </div>
+                                        <div class="profile-edit__field form-group">
+                                            <textarea>Иваненко Александр</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="profile-edit__user-type">Физическое лицо</div>
+                                </div>
+                            </div>
+                            <div class="profile-edit__right">
+                                <div class="profile-edit__card">
+                                    <div class="profile-edit__grid">
+                                        <fieldset class='form-group profile-edit__field'>
+                                            <label>Електронная почта:</label>
+                                            <input type='email' value="ivanivanenko1812@ivan.com" />
+                                        </fieldset>
+                                        <fieldset class='form-group profile-edit__field'>
+                                            <label>Номер телефона:</label>
+                                            <input type='tel' value="099 000 00 00" />
+                                        </fieldset>
+                                        <fieldset class='form-group profile-edit__field profile-edit__field--full'>
+                                            <label>Адрес доставки:</label>
+                                            <input type='text' value="г. Тула, Алексинское шоссе, д. 34, 2-й этаж, лит. 31" />
+                                        </fieldset>
+                                    </div>
+                                    <div class="profile-edit__bottom">
+                                        <button class="profile-edit__save blue-link">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10.4734 6.51129C10.4318 6.46957 10.3885 6.42625 10.3468 6.38453C10.3131 6.35084 10.2795 6.31714 10.2474 6.28505C9.63023 5.66729 9.01305 5.04953 8.39587 4.43177C8.16984 4.20552 7.94221 3.97928 7.71618 3.75143C7.63923 3.67441 7.56228 3.59739 7.48694 3.52037C7.4116 3.44496 7.33625 3.36954 7.26091 3.29413C6.98198 3.57332 6.70144 3.85412 6.42251 4.13332C6.01854 4.53767 5.61457 4.94202 5.2106 5.34637C4.74892 5.80849 4.28884 6.269 3.82876 6.72951C3.36868 7.19003 2.9086 7.65054 2.44853 8.11105L1.24944 9.31127C0.968902 9.59207 0.688367 9.87287 0.407831 10.1537C0.330885 10.2307 0.253938 10.3077 0.176991 10.3847C0.0888227 10.473 0.0118759 10.5436 0.00706677 10.688C-0.00896382 11.1052 0.00706674 11.5256 0.0086698 11.9428C0.0086698 12.4883 0.0102728 13.0323 0.0102728 13.5778C0.0102728 13.6099 0.0102728 13.6436 0.0102728 13.6757C0.0102728 13.849 0.156151 13.9966 0.330885 13.9966C0.746077 13.9966 1.16127 13.9966 1.57646 13.9982C2.1231 13.9982 2.66814 13.9998 3.21479 13.9998C3.26448 13.9998 3.31097 14.0014 3.35906 13.995C3.43922 13.9838 3.50494 13.9437 3.56105 13.8891C3.61395 13.8362 3.66685 13.7832 3.71975 13.7303C3.96342 13.4864 4.20548 13.2441 4.44914 13.0002C4.82586 12.6231 5.20258 12.246 5.5793 11.869C6.02976 11.4181 6.48022 10.9672 6.93228 10.5147C7.39877 10.0478 7.86366 9.58244 8.33015 9.11551C8.75175 8.69351 9.17496 8.2699 9.59657 7.8479C9.91557 7.52859 10.2346 7.20928 10.5536 6.88997C10.6033 6.84023 10.6546 6.78888 10.7059 6.73914C10.6257 6.66373 10.5504 6.58831 10.4734 6.51129Z" fill="#0092B4"/>
+                                                <path d="M13.7026 2.60505C13.5673 2.46964 13.432 2.33422 13.2949 2.19707C12.8161 1.71792 12.339 1.2405 11.8602 0.761343C11.7128 0.613776 11.5636 0.46621 11.4161 0.316908C11.3276 0.228368 11.2287 0.148509 11.1142 0.096427C10.8089 -0.0424587 10.429 -0.0389866 10.1462 0.15719C9.99178 0.264826 9.8634 0.410656 9.72982 0.542597C9.50602 0.766551 9.28223 0.990504 9.05843 1.21446C8.78432 1.48876 8.50848 1.76132 8.23438 2.03562L11.4716 5.27513C11.5532 5.35672 11.6347 5.43832 11.7162 5.51992L11.9608 5.7647C12.0771 5.64838 12.195 5.53033 12.3113 5.41401C12.6912 5.03381 13.0712 4.65362 13.4511 4.27342C13.5361 4.18835 13.6194 4.10502 13.7044 4.01995C13.7078 4.01648 13.713 4.01127 13.7165 4.0078C13.7217 4.00259 13.7252 3.99912 13.7304 3.99391C14.0999 3.59808 14.086 2.99046 13.7026 2.60505Z" fill="#0092B4"/>
+                                            </svg>
+                                            <span class="profile-edit__save-show">Сохранить</span>
+                                            <span class="profile-edit__save-hidden">Редактировать</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main> @@include('components/page-blocks/_footer.html')
+    </div>
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

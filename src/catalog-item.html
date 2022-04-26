@@ -393,22 +393,42 @@
 
             <section class='catalog-feedback'>
                 <div class='container'>
-                    @@include('components/page-blocks/_feedback.html')
+                    @@include('components/page-blocks/_feedback.html',{"title":"true"})
                 </div>
             </section>
 
             <section class='products'>
-                @@include('components/page-blocks/_products.html')
+                <div class='container'>
+                    <div class='products__inner'>
+                        <div class='products__top'>
+                            <h2 class="products__title display2">Сопутствующие товары</h2>
+                            <div class="products__nav">
+                                <div class='swiper-button-prev'>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.77821 1L1.22266 5.99965L6.77821 11" stroke="#0092B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                </div>
+                                <div class='swiper-button-next'>
+                                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.22179 1L6.77734 5.99965L1.22179 11" stroke="#0092B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        @@include('components/page-blocks/_products.html')
+                    </div>
+                </div>
+
             </section>
 
             <section class='seo'>
                 @@include('components/page-blocks/_seo.html')
             </section>
         </main>
-        <video controls id="myVideo" style="display:none;">
-            <source type="video/mp4" loading="lazy">
-            Your browser doesn't support HTML5 video tag.
-        </video> @@include('components/page-blocks/_footer.html')
+        @@include('components/page-blocks/_footer.html')
+        <!--  -->
+        @@include('components/page-blocks/_video-modal.html')
     </div>
     @@include('components/page-blocks/_scripts.html')
 </body>

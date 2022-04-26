@@ -1,0 +1,88 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Партнерство", "description":"", "keywords":"",})
+
+<body>
+
+    <div class="wrapper">
+        @@include('components/page-blocks/_header.html')
+        <main class="content">
+
+
+            <section class='breadcrumbs'>
+                <div class='container'>
+                    <div class='breadcrumbs__inner'>
+                        <a href="" class="breadcrumbs__item">Главная</a>
+                        <a href="" class="breadcrumbs__item">Компания</a>
+                        <span class="breadcrumbs__item">Партнерство</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class='info info--about'>
+                <div class='container'>
+                    <div class='info__inner'>
+                        <div class="info__left">
+                            <h2 class="info__title display">Партнерство с нами</h2>
+                            <div class="info__desc">
+                                <p>Стандартпарк — международная компания, работающая в сфере сбора, очистки, отвода воды, инженерного обустройства и благоустройства территории. Мы представлены в 11 странах мира и имеем 40 торговых представительств.</p>
+                                <p>Уже более 20 лет мы обеспечиваем наших клиентов качественной продукцией и образцовым обслуживанием. Мы изготавливаем свою продукцию. Наш ассортимент товаров - это оптимальное сочетание надежности и точности.</p>
+                            </div>
+                        </div>
+                        <div class="info__right">
+                            <div class="info__img">
+                                <img src="img/about2.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class='consult-form'>
+                <div class='container'>
+                    <form class='consult-form__inner'>
+                        <div class="consult-form__title display2">Анкета диллера</div>
+                        <div class="consult-form__grid">
+                            <fieldset class='form-group'>
+                                <input type='text' placeholder="Название организации" />
+                            </fieldset>
+                            <fieldset class='form-group'>
+                                <input type='tel' placeholder="Контактный телефон" />
+                            </fieldset>
+                            <fieldset class='form-group'>
+                                <input type='text' placeholder="Вид деятельности" />
+                            </fieldset>
+                            <fieldset class='form-group'>
+                                <select class="select">
+                                    <option selected disabled>Город</option>
+                                    <option>Город 1</option>
+                                    <option>Город 2</option>
+                                    <option>Город 3</option>
+                                </select>
+                            </fieldset>
+                            <fieldset class='form-group'>
+                                <input type='email' placeholder="E-mail" />
+                            </fieldset>
+                            <fieldset class='form-group consult-form__fg--text'>
+                                <textarea placeholder="Пожелания и предложения"></textarea>
+                            </fieldset>
+                            <div class="consult-form__btn-block">
+                                <button class="consult-form__btn btn btn-blue">Отправить</button>
+                            </div>
+                            <div class="consult-form__check check">
+                                <input checked type='checkbox' />
+                                <label>Согласен с Политикой обработки персональных данных</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section class='partners'>
+                @@include('components/page-blocks/_partners.html')
+            </section>
+
+        </main> @@include('components/page-blocks/_footer.html')
+    </div>
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>
