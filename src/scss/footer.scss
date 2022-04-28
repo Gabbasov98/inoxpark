@@ -1,5 +1,11 @@
 @import "vars";
 .footer {
+    &--white {
+        background-color: #fff;
+        .footer-bottom {
+            background: #F3F5F6;
+        }
+    }
     &__col {
         display: flex;
         flex-direction: column;
@@ -91,8 +97,8 @@
     }
     &__by {
         &:hover {
-            g {
-                opacity: 1;
+            svg>g {
+                opacity: 0.6;
             }
         }
     }

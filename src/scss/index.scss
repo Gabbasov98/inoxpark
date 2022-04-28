@@ -252,6 +252,14 @@
             line-height: 85px;
             display: block;
             color: $blue;
+            position: relative;
+            // opacity: 0;
+            &-show {}
+            &-animate {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
         }
         &-title {
             font-size: 16px;
@@ -291,6 +299,10 @@
 .partners {
     padding: 85px 0 105px;
     background-color: #fff;
+    .swiper-button-prev,
+    .swiper-button-next {
+        background-color: #fff;
+    }
     &__item {
         display: flex;
         align-items: center;

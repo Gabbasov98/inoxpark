@@ -90,7 +90,6 @@
                                             <img src="img/3d.svg" alt="">
                                             <span>3D-модель</span>
                                         </div>
-                                        <img class="catalog-gallery__search" src="img/search.svg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -195,7 +194,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <a href="" class="catalog-item__all blue-link">
+                                    <a href="#property" class="catalog-item__all blue-link">
                                         <span>Смотреть все характеристики</span>
                                         <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1.0542 1.5L5.05392 5.5L9.0542 1.5" stroke="#0092B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -237,7 +236,7 @@
                 </div>
             </section>
 
-            <section class='property'>
+            <section class='property' id="property">
                 <div class='container'>
                     <h3 class="property__title display2">Характеристики и схемы</h3>
                     <div class='property__inner'>
@@ -426,7 +425,9 @@
                 @@include('components/page-blocks/_seo.html')
             </section>
         </main>
-        @@include('components/page-blocks/_footer.html')
+        <footer class='footer'>
+            @@include('components/page-blocks/_footer.html')
+        </footer>
         <!--  -->
         @@include('components/page-blocks/_video-modal.html')
     </div>

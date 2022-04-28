@@ -229,6 +229,7 @@ select {
         height: 50px;
         width: 100%;
         font-size: 18px;
+        font-weight: 300;
         background-color: transparent;
         color: #000;
         font-size: 15px;
@@ -249,6 +250,7 @@ select {
         padding-right: 0;
         .current {
             padding-left: 28px;
+            font-weight: 300;
             background-image: url(../img/select-arrow.png);
         }
         .list {

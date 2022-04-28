@@ -31,7 +31,17 @@
             </section>
 
             <section class='question'>
-                @@include('components/page-blocks/_question.html')
+                <div class='container'>
+                    <div class='question__inner'>
+                        <h2 class="question__title display">
+                            Необходимо <span>индивидуальное решение?</span>
+                        </h2>
+                        <div class="question__right">
+                            <div class="question__desc">Заполните форму и в течении 1 дня мы подготовим предложение по организации системы водоотведения на вашем объекте.</div>
+                            <button class="question__btn btn btn-blue">Получить индивидуальное решение</button>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section class='info'>
@@ -124,7 +134,9 @@
                 @@include('components/page-blocks/_seo.html')
             </section>
         </main>
-        @@include('components/page-blocks/_footer.html')
+        <footer class='footer'>
+            @@include('components/page-blocks/_footer.html')
+        </footer>
     </div>
     @@include('components/page-blocks/_scripts.html')
 </body>

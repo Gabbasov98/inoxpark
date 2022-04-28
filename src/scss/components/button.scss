@@ -82,7 +82,7 @@
     justify-content: center;
     opacity: 1 !important;
     &:hover {
-        background: $blue;
+        background: $blue !important;
         path {
             stroke: #fff;
         }

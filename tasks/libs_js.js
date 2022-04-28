@@ -3,7 +3,10 @@ const plugins = [
     'node_modules/swiper/swiper-bundle.js',
     'node_modules/bootstrap/dist/js/bootstrap.js',
     'src/libs/js/jquery.fancybox.min.js',
-    'src/libs/js/jquery.nice-select.min.js'
+    'src/libs/js/jquery.nice-select.min.js',
+    'src/libs/js/jquery.mCustomScrollbar.concat.min.js',
+    'src/libs/js/jquery.maskedinput.min.js',
+    'src/libs/js/jquery.animateNumber.min.js'
 ];
 const {
     src,

@@ -11,6 +11,9 @@
         grid-template-columns: 1fr 1fr;
         gap: 35px;
     }
+    .page-bottom {
+        margin-top: 100px;
+    }
 }
 
 .info--news {
@@ -198,6 +201,9 @@
         &__items {
             gap: 30px;
             grid-template-columns: 1fr;
+        }
+        .page-bottom {
+            margin-top: 50px;
         }
     }
     .news-gallery {

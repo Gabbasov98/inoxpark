@@ -5,6 +5,16 @@
 .order {
     display: flex;
     justify-content: space-between;
+    &:hover {
+        .mCSB_scrollTools {
+            opacity: 1;
+        }
+        .mCS_no_scrollbar {
+            .mCSB_scrollTools {
+                opacity: 0;
+            }
+        }
+    }
     &:not(:last-child) {
         margin-bottom: 65px;
     }
@@ -55,14 +65,32 @@
     &__items {
         padding-left: 36px;
         padding-right: 8px;
+        transition: all .225s;
         &-wrap {
-            max-height: 406px;
-            overflow-y: auto;
+            max-height: 416px;
+            transition: all .225s;
             padding-right: 25px;
             @include scroll;
+            overflow-y: auto;
+        }
+        .mCSB_scrollTools {
+            background: #EBEDEF;
+            width: 6px !important;
+            height: 100%;
+            opacity: 0;
+        }
+        .mCSB_draggerRail {
+            width: 6px;
+            background: transparent;
+        }
+        .mCSB_dragger_bar {
+            background: #BAC6CB !important;
+            border-radius: 3px !important;
+            width: 6px !important;
         }
     }
     &__item {
+        transition: all .225s;
         padding: 22px 0;
         &:not(:last-child) {
             border-bottom: 1px solid rgba(196, 196, 196, 0.5);

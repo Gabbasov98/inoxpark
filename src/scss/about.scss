@@ -77,6 +77,9 @@
     }
     .swiper-slide {
         height: auto;
+        a {
+            display: block;
+        }
         img {
             width: 100%;
             min-height: 100%;
@@ -100,6 +103,10 @@
         border-radius: 6px;
         padding: 74px 20px;
         text-align: center;
+        display: block;
+        &:hover {
+            box-shadow: unset;
+        }
         &-icon {
             width: 100px;
             height: 100px;

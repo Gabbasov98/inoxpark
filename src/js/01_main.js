@@ -1,5 +1,11 @@
 $(document).ready(function() {
+
+    $('input[type="tel"]').mask('+7 999 999-9999', { placeholder: '+7             ' });
     $(".select").niceSelect()
+    if (window.innerWidth > 768) {
+        $(".order__items-wrap").mCustomScrollbar()
+    }
+
     cartCalc()
 
     $(".header__burger").click(function() {

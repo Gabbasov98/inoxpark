@@ -1,0 +1,76 @@
+@import "vars";
+.error404 {
+    padding: 150px 0;
+    &__inner {
+        position: relative;
+    }
+    &__wrap {
+        max-width: 322px;
+    }
+    &__desc {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 138%;
+        margin-top: 27px;
+    }
+    &__buttons {
+        margin-top: 47px;
+        display: flex;
+    }
+    &__btn {
+        padding: 0 35px;
+        margin-right: 19px;
+    }
+    &__num {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 400;
+        font-size: 465px;
+        color: #F3F5F6;
+        text-shadow: -15px -15px 30px #FFFFFF, 5px 15px 30px rgba(76, 82, 91, 0.127595);
+        font-family: $font2;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .error404 {
+        &__num {
+            font-size: 370px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .error404 {
+        padding: 60px 0;
+        &__num {
+            position: static;
+            transform: unset;
+            font-size: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .error404 {
+        padding: 30px 0;
+        &__desc {
+            font-size: 14px;
+            margin-top: 15px;
+        }
+        &__num {
+            font-size: 170px;
+        }
+        &__buttons {
+            display: block;
+            margin-top: 30px;
+        }
+        &__btn {
+            margin: 0 0 10px;
+            width: 100%;
+        }
+    }
+}

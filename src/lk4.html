@@ -21,7 +21,7 @@
                     <h1 class="lk__title display">Личный кабинет</h1>
                     @@include('components/lk/_lk-links.html',{"active":"profile"})
                     <div class="lk__content">
-                        <div class="profile-edit profile-edit--savedd">
+                        <div class="profile-edit profile-edit--saved">
                             <div class="profile-edit__left">
                                 <div class="profile-edit__card">
                                     <div class="profile-edit__user">
@@ -45,7 +45,7 @@
                                         </fieldset>
                                         <fieldset class='form-group profile-edit__field'>
                                             <label>Номер телефона:</label>
-                                            <input type='tel' value="099 000 00 00" />
+                                            <input type='tel' value="+7 111 111-1111" />
                                         </fieldset>
                                         <fieldset class='form-group profile-edit__field profile-edit__field--full'>
                                             <label>Наименование организации:</label>
@@ -126,7 +126,10 @@
                 </div>
             </section>
 
-        </main> @@include('components/page-blocks/_footer.html')
+        </main>
+        <footer class='footer footer--white'>
+            @@include('components/page-blocks/_footer.html')
+        </footer>
     </div>
     @@include('components/page-blocks/_scripts.html')
 </body>

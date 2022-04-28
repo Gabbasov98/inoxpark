@@ -5,6 +5,11 @@ function gallery() {
         freeMode: true,
         watchSlidesProgress: true,
         direction: "vertical",
+        // mousewheel: true,
+        mousewheel: {
+            releaseOnEdges: true,
+        },
+        speed: 1000,
         scrollbar: {
             el: '.catalog-gallery .swiper-scrollbar',
             draggable: true,
@@ -154,6 +159,7 @@ function catalogsSliders() {
             slidesPerView: 4,
             freeMode: true,
             watchSlidesProgress: true,
+
         })
         big = new Swiper(`.project-card2__gallery[data-slider-id="${index}"] .mySwiper2`, {
             slidesPerView: "auto",
