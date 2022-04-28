@@ -180,6 +180,42 @@ function catalogsSliders() {
     })
 }
 
+let catalogGroupSlidersArray = []
+
+function catalogGroupSliders() {
+    $(".catalogs-group").each(function(index, el) {
+        $(el).attr("data-slider-id", `${index}`)
+        catalogGroupSlidersArray[index] = new Swiper(`.catalogs-group[data-slider-id="${index}"] .swiper-container`, {
+            slidesPerView: 1.5,
+            spaceBetween: 30,
+            // loop: true,
+            navigation: {
+                nextEl: `.catalogs-group[data-slider-id="${index}"] .swiper-button-next`,
+                prevEl: `.catalogs-group[data-slider-id="${index}"] .swiper-button-prev`,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1
+                },
+                600: {
+                    slidesPerView: 1.5,
+                },
+                800: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    slidesPerView: 1,
+                },
+                1100: {
+                    slidesPerView: 1.3,
+                },
+                1250: {
+                    slidesPerView: 1.5,
+                },
+            }
+        })
+    })
+}
 
 
 
@@ -191,6 +227,7 @@ $(document).ready(function() {
     catalogsSliders()
     projectSliders()
     catalogsSliders()
+    catalogGroupSliders()
 
     $("[data-video-src]").click(function() {
         let videoSrc = $(this).attr("data-video-src")
