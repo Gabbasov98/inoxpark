@@ -6,7 +6,8 @@ const plugins = [
     'src/libs/js/jquery.nice-select.min.js',
     'src/libs/js/jquery.mCustomScrollbar.concat.min.js',
     'src/libs/js/jquery.maskedinput.min.js',
-    'src/libs/js/jquery.animateNumber.min.js'
+    'src/libs/js/jquery.animateNumber.min.js',
+    'src/libs/js/slick.min.js',
 ];
 const {
     src,

@@ -69,4 +69,14 @@ $(document).ready(function() {
     whySlider()
     teamSlider()
     partnersSlider()
+
+
+    $(".main__marker").click(function() {
+        let elId = $(this).attr("data-info")
+        console.log(elId)
+        $(`.main__img`).removeClass("main__img--active")
+        $(`.main__img[data-info="${elId}"]`).addClass("main__img--active")
+        $(".main__info").removeClass("main__info--active")
+        $(this).parents(".main__info").addClass("main__info--active")
+    })
 })

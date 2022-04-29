@@ -3,7 +3,8 @@ const plugins = [
     'node_modules/swiper/swiper-bundle.css',
     'src/libs/css/jquery.fancybox.min.css',
     'src/libs/css/nice-select.css',
-    'src/libs/css/jquery.mCustomScrollbar.css'
+    'src/libs/css/jquery.mCustomScrollbar.css',
+    'src/libs/css/slick.css',
 ];
 
 const {
