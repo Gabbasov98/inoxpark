@@ -288,6 +288,11 @@
         font-weight: 700;
         font-size: 14px;
         line-height: 17px;
+        transition: all .225s;
+        &:hover {
+            cursor: pointer;
+            color: $blue;
+        }
         img {
             margin-right: 11px;
         }

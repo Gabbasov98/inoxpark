@@ -134,9 +134,23 @@
             404
         </a>
 
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#addFeedback">
+            Добавить отзыв
+        </button>
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#buyModal">
+            Купить в один клик
+        </button>
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#callModal">
+            Заказать обратный звонок
+        </button>
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#Model">
+            3-D модель товара
+        </button>
+
     </div>
 
-
+    @@include('components/_popups.html')
+    <!--  -->
     @@include('components/page-blocks/_scripts.html')
 </body>
 
