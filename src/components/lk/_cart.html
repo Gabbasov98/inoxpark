@@ -131,11 +131,85 @@
                 </button>
                 <span>Добавить товар по названию или артикулу:</span>
             </div>
-            <div class="cart__search form-group">
-                <input type="text" placeholder="Начните вводить название или артикул">
-                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.6491 1.7854C5.10635 1.7854 2.23438 4.65737 2.23438 8.20013C2.23438 11.7429 5.10635 14.6149 8.6491 14.6149C9.89941 14.6149 11.0662 14.2572 12.0526 13.6385L14.2094 15.7952C14.7406 16.3264 15.5853 16.353 16.1479 15.8749L16.243 15.7865C16.8021 15.2274 16.8021 14.3208 16.243 13.7616L14.0865 11.6052C14.7058 10.6184 15.0638 9.45109 15.0638 8.20013C15.0638 4.65737 12.1919 1.7854 8.6491 1.7854ZM8.64484 4.64903C10.6061 4.64903 12.1959 6.23891 12.1959 8.20013C12.1959 10.1613 10.6061 11.7512 8.64484 11.7512C6.68363 11.7512 5.09375 10.1613 5.09375 8.20013C5.09375 6.23891 6.68363 4.64903 8.64484 4.64903Z" fill="#0092B4"/>
-                </svg>
+            <div class="cart__search cart__search--active">
+                <div class="cart__search-show form-group">
+                    <input type="text" placeholder="Начните вводить название или артикул">
+                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.6491 1.7854C5.10635 1.7854 2.23438 4.65737 2.23438 8.20013C2.23438 11.7429 5.10635 14.6149 8.6491 14.6149C9.89941 14.6149 11.0662 14.2572 12.0526 13.6385L14.2094 15.7952C14.7406 16.3264 15.5853 16.353 16.1479 15.8749L16.243 15.7865C16.8021 15.2274 16.8021 14.3208 16.243 13.7616L14.0865 11.6052C14.7058 10.6184 15.0638 9.45109 15.0638 8.20013C15.0638 4.65737 12.1919 1.7854 8.6491 1.7854ZM8.64484 4.64903C10.6061 4.64903 12.1959 6.23891 12.1959 8.20013C12.1959 10.1613 10.6061 11.7512 8.64484 11.7512C6.68363 11.7512 5.09375 10.1613 5.09375 8.20013C5.09375 6.23891 6.68363 4.64903 8.64484 4.64903Z" fill="#0092B4"/>
+                    </svg>
+                </div>
+                <div class="cart__search-hidden">
+                    <div class="cart__search-items">
+                        <div class="cart__search-item">
+                            <a href="" class="cart__search-item-img">
+                                <img src="img/catalog-item.webp" alt="" class="mCS_img_loaded">
+                            </a>
+                            <div class="cart__search-item-content">
+                                <a href="" class="cart__search-item-title">Система линейного водоотвода Евро, 200 мм</a>
+                                <div class="cart__search-item-articul">
+                                    <span>Артикул</span> 090034-UA
+                                </div>
+                            </div>
+                            <button class="cart__search-item-add btn blue-link">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5 9.50058C5 10.329 5.67159 11.0006 6.50003 11.0006H8.99998V13.5002C8.99998 14.3286 9.67157 15.0002 10.5 15.0002C11.3285 15.0002 12 14.3286 12 13.5002V11.0006L14.5001 11.0006C15.3286 11.0006 16.0002 10.329 16.0002 9.50058C16.0002 8.67214 15.3286 8.00055 14.5001 8.00055L12 8.00055L12 5.50006C12 4.67162 11.3285 4.00003 10.5 4.00003C9.67157 4.00003 8.99998 4.67162 8.99998 5.50006L8.99998 8.00055L6.50003 8.00055C5.67159 8.00055 5 8.67214 5 9.50058Z" fill="#0092B4"/>
+                                </svg>
+                                <span>Добавить товар</span>
+                            </button>
+                        </div>
+                        <div class="cart__search-item">
+                            <a href="" class="cart__search-item-img">
+                                <img src="img/catalog-item.webp" alt="" class="mCS_img_loaded">
+                            </a>
+                            <div class="cart__search-item-content">
+                                <a href="" class="cart__search-item-title">Система линейного водоотвода Евро, 200 мм</a>
+                                <div class="cart__search-item-articul">
+                                    <span>Артикул</span> 090034-UA
+                                </div>
+                            </div>
+                            <button class="cart__search-item-add btn blue-link">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5 9.50058C5 10.329 5.67159 11.0006 6.50003 11.0006H8.99998V13.5002C8.99998 14.3286 9.67157 15.0002 10.5 15.0002C11.3285 15.0002 12 14.3286 12 13.5002V11.0006L14.5001 11.0006C15.3286 11.0006 16.0002 10.329 16.0002 9.50058C16.0002 8.67214 15.3286 8.00055 14.5001 8.00055L12 8.00055L12 5.50006C12 4.67162 11.3285 4.00003 10.5 4.00003C9.67157 4.00003 8.99998 4.67162 8.99998 5.50006L8.99998 8.00055L6.50003 8.00055C5.67159 8.00055 5 8.67214 5 9.50058Z" fill="#0092B4"/>
+                                </svg>
+                                <span>Добавить товар</span>
+                            </button>
+                        </div>
+                        <div class="cart__search-item">
+                            <a href="" class="cart__search-item-img">
+                                <img src="img/catalog-item.webp" alt="" class="mCS_img_loaded">
+                            </a>
+                            <div class="cart__search-item-content">
+                                <a href="" class="cart__search-item-title">Система линейного водоотвода Евро, 200 мм</a>
+                                <div class="cart__search-item-articul">
+                                    <span>Артикул</span> 090034-UA
+                                </div>
+                            </div>
+                            <button class="cart__search-item-add btn blue-link">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5 9.50058C5 10.329 5.67159 11.0006 6.50003 11.0006H8.99998V13.5002C8.99998 14.3286 9.67157 15.0002 10.5 15.0002C11.3285 15.0002 12 14.3286 12 13.5002V11.0006L14.5001 11.0006C15.3286 11.0006 16.0002 10.329 16.0002 9.50058C16.0002 8.67214 15.3286 8.00055 14.5001 8.00055L12 8.00055L12 5.50006C12 4.67162 11.3285 4.00003 10.5 4.00003C9.67157 4.00003 8.99998 4.67162 8.99998 5.50006L8.99998 8.00055L6.50003 8.00055C5.67159 8.00055 5 8.67214 5 9.50058Z" fill="#0092B4"/>
+                                </svg>
+                                <span>Добавить товар</span>
+                            </button>
+                        </div>
+                        <div class="cart__search-item">
+                            <a href="" class="cart__search-item-img">
+                                <img src="img/catalog-item.webp" alt="" class="mCS_img_loaded">
+                            </a>
+                            <div class="cart__search-item-content">
+                                <a href="" class="cart__search-item-title">Система линейного водоотвода Евро, 200 мм</a>
+                                <div class="cart__search-item-articul">
+                                    <span>Артикул</span> 090034-UA
+                                </div>
+                            </div>
+                            <button class="cart__search-item-add btn blue-link">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5 9.50058C5 10.329 5.67159 11.0006 6.50003 11.0006H8.99998V13.5002C8.99998 14.3286 9.67157 15.0002 10.5 15.0002C11.3285 15.0002 12 14.3286 12 13.5002V11.0006L14.5001 11.0006C15.3286 11.0006 16.0002 10.329 16.0002 9.50058C16.0002 8.67214 15.3286 8.00055 14.5001 8.00055L12 8.00055L12 5.50006C12 4.67162 11.3285 4.00003 10.5 4.00003C9.67157 4.00003 8.99998 4.67162 8.99998 5.50006L8.99998 8.00055L6.50003 8.00055C5.67159 8.00055 5 8.67214 5 9.50058Z" fill="#0092B4"/>
+                                </svg>
+                                <span>Добавить товар</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="cart__right">

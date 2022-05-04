@@ -6,6 +6,7 @@ $(document).ready(function() {
         $(".order__items-wrap").mCustomScrollbar()
     }
     $(".cart-modal__items").mCustomScrollbar()
+    $(".cart__search-items").mCustomScrollbar()
 
     cartCalc()
 
