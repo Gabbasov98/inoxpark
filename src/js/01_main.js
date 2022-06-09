@@ -92,6 +92,12 @@ $(document).ready(function() {
         let ratingItem = parseInt($(this).attr("data-rating-value"))
         $(this).parent(".rating").attr("data-total-rating", ratingItem)
     })
+
+    $(".header__dropdown-toggler").click(function(e) {
+        e.preventDefault()
+        console.log(true);
+        $(this).parents(".header__link--dropdown").find(".header-menu").slideToggle()
+    })
 });
 
 function cartCalc() {
