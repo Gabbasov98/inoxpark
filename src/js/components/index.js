@@ -93,7 +93,6 @@ $(document).ready(function() {
         setInterval(() => {
             let activeMarker
             let mouseIn = $(`.main__marker`).hasClass("mouseIn")
-            console.log(mouseIn);
             if (!mouseIn) {
                 if (currentMarkerId === markers) {
                     activeMarker = $(`.main__marker[data-info="1"]`)
