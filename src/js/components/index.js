@@ -71,12 +71,42 @@ $(document).ready(function() {
     partnersSlider()
 
 
-    $(".main__marker").click(function() {
-        let elId = $(this).attr("data-info")
-        console.log(elId)
+    $(".main__marker").mouseover(function() {
+
+        setActiveMarker(this)
+
+    })
+
+    let markers = $(".main__marker").length
+
+    console.log(markers);
+
+    function changeActiveMarker() {
+        let currentMarker = 1
+
+
+        setInterval(() => {
+            let activeMarker
+            if (currentMarker === markers) {
+                activeMarker = $(`.main__marker[data-info="1"]`)
+                currentMarker = 1
+            } else {
+                activeMarker = $(`.main__marker[data-info="${currentMarker + 1}"]`)
+                currentMarker++
+            }
+            console.log(currentMarker);
+            setActiveMarker(activeMarker)
+        }, 2000);
+    }
+
+
+    changeActiveMarker()
+
+    function setActiveMarker(el) {
+        let elId = $(el).attr("data-info")
         $(`.main__img`).removeClass("main__img--active")
         $(`.main__img[data-info="${elId}"]`).addClass("main__img--active")
         $(".main__info").removeClass("main__info--active")
-        $(this).parents(".main__info").addClass("main__info--active")
-    })
+        $(el).parents(".main__info").addClass("main__info--active")
+    }
 })
