@@ -71,39 +71,55 @@ $(document).ready(function() {
     partnersSlider()
 
 
+
+
     $(".main__marker").mouseover(function() {
-
-        setActiveMarker(this)
-
+        $(this).addClass("mouseIn")
+    })
+    $(".main__marker").mouseleave(function() {
+        $(this).removeClass("mouseIn")
     })
 
     let markers = $(".main__marker").length
+    let currentMarker = $(".main__info--active .main__marker")
+    let currentMarkerId = +$(currentMarker).attr("data-info")
 
-    console.log(markers);
+    if (markers > 0) { changeActiveMarker() }
 
     function changeActiveMarker() {
-        let currentMarker = 1
+
 
 
         setInterval(() => {
             let activeMarker
-            if (currentMarker === markers) {
-                activeMarker = $(`.main__marker[data-info="1"]`)
-                currentMarker = 1
-            } else {
-                activeMarker = $(`.main__marker[data-info="${currentMarker + 1}"]`)
-                currentMarker++
+            let mouseIn = $(`.main__marker`).hasClass("mouseIn")
+            console.log(mouseIn);
+            if (!mouseIn) {
+                if (currentMarkerId === markers) {
+                    activeMarker = $(`.main__marker[data-info="1"]`)
+                    currentMarkerId = 1
+                } else {
+                    activeMarker = $(`.main__marker[data-info="${currentMarkerId + 1}"]`)
+                    currentMarkerId++
+                }
+                setActiveMarker(activeMarker)
             }
-            console.log(currentMarker);
-            setActiveMarker(activeMarker)
+
         }, 2000);
+
+
     }
 
+    $(".main__marker").mouseover(function() {
+        setActiveMarker(this)
+    })
 
-    changeActiveMarker()
+
+
 
     function setActiveMarker(el) {
         let elId = $(el).attr("data-info")
+        currentMarker = +elId
         $(`.main__img`).removeClass("main__img--active")
         $(`.main__img[data-info="${elId}"]`).addClass("main__img--active")
         $(".main__info").removeClass("main__info--active")
