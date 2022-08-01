@@ -23,3 +23,36 @@
 @import 'orders';
 @import '404';
 @import 'history';
+@media screen and (min-width: 992px) {
+    .header__link--small-menu {
+        position: relative;
+    }
+    .header-menu--small {
+        width: 250px;
+        position: absolute;
+        top: 100%;
+        left: -50px;
+    }
+    .header-menu--small .header-menu__inner {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .header-menu {
+        box-shadow: none;
+        background: transparent;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .header-menu .container {
+        box-shadow: 10px 30px 40px rgba(76, 82, 91, 0.1);
+        background: #FFFFFF;
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+    .header-menu--small .container {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}

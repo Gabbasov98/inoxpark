@@ -83,12 +83,12 @@ $(document).ready(function() {
     let markers = $(".main__marker").length
     let currentMarker = $(".main__info--active .main__marker")
     let currentMarkerId = +$(currentMarker).attr("data-info")
+    // $(`.main__inner`).removeClass("main__inner--active")
+    $(`.main__inner[data-info="${currentMarkerId}"]`).addClass("main__inner--active")
 
     if (markers > 0) { changeActiveMarker() }
 
     function changeActiveMarker() {
-
-
 
         setInterval(() => {
             let activeMarker
@@ -115,7 +115,6 @@ $(document).ready(function() {
 
 
 
-
     function setActiveMarker(el) {
         let elId = $(el).attr("data-info")
         currentMarker = +elId
@@ -123,5 +122,7 @@ $(document).ready(function() {
         $(`.main__img[data-info="${elId}"]`).addClass("main__img--active")
         $(".main__info").removeClass("main__info--active")
         $(el).parents(".main__info").addClass("main__info--active")
+        $(`.main__inner`).removeClass("main__inner--active")
+        $(`.main__inner[data-info="${elId}"]`).addClass("main__inner--active")
     }
 })

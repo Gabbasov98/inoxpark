@@ -20,8 +20,8 @@
         position: absolute;
         &--active {
             .main__inner {
-                opacity: 1;
-                pointer-events: unset;
+                //opacity: 1;
+                //pointer-events: unset;
             }
         }
     }
@@ -86,6 +86,22 @@
                 right: unset;
                 left: 100%;
             }
+        }
+        &--active{
+            opacity: 1;
+            pointer-events: unset;
+        }
+        &[data-info='1']{
+            transform: translate(40px,-40%);
+        }
+        &[data-info='2']{
+            transform: translate(-42%, 35px);
+        }
+        &[data-info='3']{
+            transform: translate(-159%, -40%);
+        }
+        &[data-info='4']{
+            transform: translate(-159%, -40%);
         }
     }
     &__title {
@@ -442,25 +458,34 @@
             transform: unset;
             height: unset;
         }
+        &__images{
+            position: relative;
+        }
         &__info {
             // position: absolute;
         }
         &__inner {
+            position: static;
             margin: 0;
-            position: fixed;
-            top: 100px!important;
-            left: 50% !important;
-            transform: translate(-50%, 0) !important;
+            transform: unset !important;
             z-index: 10;
+            display: none;
+            width: 100%;
+            padding: 30px 20px;
+            &--active{
+                display: block;
+            }
             &::after,
             &::before {
                 display: none;
             }
         }
+        &__title,
         &__desc {
-            max-width: 195px;
+            max-width: 100%;
         }
     }
+
     .why {
         padding-top: 50px;
         &__inner {
@@ -481,6 +506,7 @@
             width: 250px;
         }
     }
+
     .our-product {
         padding: 30px 0 70px;
         &__items {
@@ -488,6 +514,7 @@
             grid-template-columns: 1fr;
         }
     }
+
     .question {
         &__inner {
             max-width: 100%;
@@ -506,6 +533,7 @@
             max-width: 400px;
         }
     }
+
     .info {
         padding: 30px 0;
         &__inner {
@@ -549,6 +577,7 @@
             margin-top: 32px;
         }
     }
+
     .advantages {
         &__items {
             grid-template-columns: 1fr 1fr 1fr;
@@ -573,6 +602,7 @@
             padding: 30px 0;
         }
     }
+
     .new-articles {
         padding: 70px 0;
         &__items {
@@ -583,6 +613,7 @@
             margin-top: 40px;
         }
     }
+
     .seo {
         padding: 70px 0;
         h2 {
@@ -592,6 +623,16 @@
 }
 
 @media screen and (max-width: 600px) {
+    .main{
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 200px;
+            left: 0;
+
+        }
+    }
     .advantages {
         &__items {
             grid-template-columns: 1fr 1fr;
